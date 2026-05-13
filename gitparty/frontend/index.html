@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitParty - Gestão de Eventos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>GitParty</h1>
+    <nav>
+      <a href="#usuarios">Usuários</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#inscricoes">Inscrições</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h2>Sistema de Gestão de Eventos</h2>
+      <p>
+        Plataforma simples para gerenciamento de eventos,
+        participantes e inscrições.
+      </p>
+    </section>
+
+    <section id="usuarios" class="card">
+      <h2>Cadastro de Usuários</h2>
+
+      <form id="formUsuario">
+        <input type="text" id="nome" placeholder="Nome" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="senha" placeholder="Senha" required />
+
+        <button type="submit">Cadastrar Usuário</button>
+      </form>
+
+      <div id="listaUsuarios" class="lista"></div>
+    </section>
+
+    <section id="eventos" class="card">
+      <h2>Cadastro de Eventos</h2>
+
+      <form id="formEvento">
+        <input type="text" id="titulo" placeholder="Título do evento" required />
+
+        <textarea id="descricao" placeholder="Descrição"></textarea>
+
+        <input type="date" id="data_evento" required />
+
+        <input type="text" id="local" placeholder="Local" required />
+
+        <input type="number" id="capacidade" placeholder="Capacidade máxima" required />
+
+        <select id="statusEvento">
+          <option value="ATIVO">Ativo</option>
+          <option value="CANCELADO">Cancelado</option>
+          <option value="ENCERRADO">Encerrado</option>
+        </select>
+
+        <button type="submit">Cadastrar Evento</button>
+      </form>
+
+      <div id="listaEventos" class="lista"></div>
+    </section>
+
+    <section id="inscricoes" class="card">
+      <h2>Inscrições</h2>
+
+      <form id="formInscricao">
+        <select id="usuarioSelect"></select>
+
+        <select id="eventoSelect"></select>
+
+        <button type="submit">Realizar Inscrição</button>
+      </form>
+
+      <div id="listaInscricoes" class="lista"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
